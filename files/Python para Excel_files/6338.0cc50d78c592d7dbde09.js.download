@@ -1,0 +1,2 @@
+(self.webpackChunk_scribd_app_monolith=self.webpackChunk_scribd_app_monolith||[]).push([[6338],{46338:(e,d,f)=>{("undefined"!=typeof window?window:void 0!==f.g?f.g:"undefined"!=typeof self?self:{}).SENTRY_RELEASE={id:"38de48b62e007f46012bc4b0ccb65b2f95d1d011"}}}]);
+//# sourceMappingURL=https://www.scribd.com/webpack/monolith/6338.0cc50d78c592d7dbde09.js.map
