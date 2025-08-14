@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livros - Ciência da Computação</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="files/img/favicon.png" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </head>
 <body>
     <main>
@@ -33,14 +36,34 @@
         
         <article class="topicos">
             <h2>Circuitos Digitais</h2>
-            <a href="files/circuitos/Sistemas Digitais Princípios e Aplicações (Ronald J. Tocci, Neal S. Widmer etc.).pdf" target="_blank" alt="Circuito Lógico">Sistemas Digitais: Princípios e Aplicações - Ronald J. Tocci 11ª ED</a>
-            <a href="files/circuitos/Equivalencia Logica.pdf" target="_blank" alt="Circuito Lógico">Equivalência Lógica - PUC Goiás</a>
-            <a href="files/circuitos/Equivalencia Logica IFRN.pdf.pdf" target="_blank" alt="Circuito Lógico">Equivalência Lógica - IFRN</a>
-            <a href="files/circuitos/Logica Equivalencia.pdf" target="_blank" alt="Circuito Lógico">Lógica Equivalência - IFRN</a>
+            <a href="files/circuitos/Sistemas Digitais Princípios e Aplicações (Ronald J. Tocci, Neal S. Widmer etc.).pdf" target="_blank" title="Circuito Lógico">Sistemas Digitais: Princípios e Aplicações - Ronald J. Tocci 11ª ED</a>
+
+            <ul id="circuitosDigitaisLinks"></ul>
+
+            <script>
+                const basePath = "files/circuitos//Sistemas Digitais Princípios e Aplicações (Ronald J. Tocci, Neal S. Widmer etc.).pdf";
+                const links = [
+                    { nome: "Sumário", pagina: 16 },
+                    { nome: "Capítulo 1", pagina: 44 },
+                    { nome: "Capítulo 2", pagina: 69 }
+                ];
+
+                const lista = document.getElementById("circuitosDigitaisLinks");
+                links.forEach(link => {
+                    const li = document.createElement("li");
+                    const a = document.createElement("a");
+                    a.href = `${basePath}#page=${link.pagina}`;
+                    a.textContent = link.nome;
+                    a.target = "_blank";
+                    li.appendChild(a);
+                    lista.appendChild(li);
+                });
+            </script>
+
+            <a href="files/circuitos/Equivalencia Logica.pdf" target="_blank" title="Circuito Lógico">Equivalência Lógica - PUC Goiás</a>
+            <a href="files/circuitos/Equivalencia Logica IFRN.pdf.pdf" target="_blank" title="Circuito Lógico">Equivalência Lógica - IFRN</a>
+            <a href="files/circuitos/Logica Equivalencia.pdf" target="_blank" title="Circuito Lógico">Lógica Equivalência - IFRN</a>
         </article>
     </main>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

@@ -81,6 +81,13 @@ a:hover {
     color: var(--verde3);
 }
 
+ul {
+    margin-top: 0;
+    list-style: circle;
+    color: var(--verde);
+    font-size: 0.9em;
+}
+
 /* RESPONSIVO */
 @media (max-width: 720px) {
     article {
